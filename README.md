@@ -10,7 +10,7 @@ This module provides GPS-related functions
 
 ### Example ###
 
-**Radius of current position**
+**Radius**
 ```cs
 var ll = new LatLng(<Lat>, <Long>);
 
@@ -31,6 +31,30 @@ double d1 = GPSMath.Distance(l1, l2);
 
 // Extension method support
 double d2 = l1.Distance(l2);
+```
+
+**DistanceCeiling**
+```cs
+var l1 = new LatLng(<Lat1>, <Long1>);
+var l2 = new LatLng(<Lat2>, <Long2>);
+double range = 4; // Units are meters
+
+// The distance between l1 and l2 is rounded down to mDistance.
+double d1 = GPSMath.DistanceCeiling(l1, l2);
+
+// Extension method support
+double d2 = l1.DistanceCeiling(l2);
+```
+
+**ToDistanceString**
+```cs
+double distance = 100; // Units are meters
+
+// Converts metric distances into strings of cm, m, km.
+string str = GPSMath.ToDistanceString(distance);
+
+// Extension method support
+distance.ToDistanceString();
 ```
 
 **MidPoint**
