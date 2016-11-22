@@ -1,12 +1,17 @@
-# GPSMath #
+# README
 
 ### Feedback ###
 develope_e@naver.com
 
 
-### HangulLib ###
-This module provides GPS-related functions
+### GPSMath ###
+Because the earth is not a circle, calculating distances with a single radius is prone to error.
 
+So we reduced the error range by calculating the distance based on the radius of the current position (approximate).
+
+Many double operations in C # can degrade software performance. 
+
+So we improved the performance by calculating the distance as an integer through position indexing.
 
 ### Example ###
 
